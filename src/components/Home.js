@@ -1,7 +1,4 @@
-import {
-  gradientBackgroundStyle,
-  waveBackgroundStyle,
-} from "../utils/constants";
+import { waveBackgroundStyle } from "../utils/constants";
 import Header from "./Header";
 
 const Home = () => {
@@ -10,7 +7,7 @@ const Home = () => {
       <Header />
       <div
         className="flex flex-col items-center justify-center h-screen"
-        style={(gradientBackgroundStyle, waveBackgroundStyle)}
+        style={waveBackgroundStyle}
       >
         <h1 className="font-bold text-3xl mb-4">
           Check all your OTT subscriptions at one place

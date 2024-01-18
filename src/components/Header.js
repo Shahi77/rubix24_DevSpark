@@ -2,7 +2,10 @@ import { gradientBackgroundStyle } from "../utils/constants";
 
 const Header = () => {
   return (
-    <nav className="flex justify-between p-3" style={gradientBackgroundStyle}>
+    <nav
+      className="flex justify-between p-3 shadow-md"
+      style={gradientBackgroundStyle}
+    >
       <img src="./logo.png" alt="logo" className="w-11" />
       <h1 className="m-auto font-bold text-lg">OTT Dashboard</h1>
       <div>

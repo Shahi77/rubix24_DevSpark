@@ -1,5 +1,5 @@
 import "./App.css";
-import Body from "./components/Body";
+import Body from "./Components/Body";
 
 const App = () => {
   return (

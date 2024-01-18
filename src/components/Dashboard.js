@@ -7,10 +7,10 @@ const Dashboard = () => {
     <>
       <Header />
       <div
-        className="min-h-screen flex flex-wrap px-48 items-center"
+        className="min-h-screen px-44 py-4 items-center"
         style={waveBackgroundStyle}
       >
-        <ul className="flex list-none space-x-8">
+        <ul className="flex flex-wrap list-none space-x-8">
           <li>
             <OttCard title={"Amazon Prime"} />
           </li>

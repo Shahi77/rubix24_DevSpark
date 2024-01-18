@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState(false);
-  const location = useLocation();
+  const location = useLocation(); // to get current page path
 
   useEffect(() => {
     // update isLogin state based on page path

@@ -1,9 +1,15 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { gradientBackgroundStyle } from "../utils/constants";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Header = () => {
   const [isLogin, setIsLogin] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    // update isLogin state based on page path
+    setIsLogin(location.pathname === "/dashboard");
+  }, [location]);
 
   const handleLoginClick = () => {
     setIsLogin(!isLogin);
@@ -11,7 +17,7 @@ const Header = () => {
 
   return (
     <nav
-      className="flex justify-between p-3 shadow-md"
+      className="flex justify-between p-3 shadow-lg"
       style={gradientBackgroundStyle}
     >
       <div>
@@ -24,7 +30,7 @@ const Header = () => {
         <ul>
           <Link to={isLogin === false ? "/dashboard" : "/"}>
             <button
-              className="w-20 mt-1 text-center font-semibold border-0 shadow-xl rounded-md px-2 py-1 text-black bg-white hover:bg-[#0066ff] hover:text-white hover:shadow-2xl transition-all duration-300 ease-in-out"
+              className="w-20 mt-1 text-center font-semibold border-0 shadow-2xl rounded-md px-2 py-1 text-black bg-white hover:bg-[#0066ff] hover:text-white hover:shadow-2xl transition-all duration-300 ease-in-out"
               onClick={handleLoginClick}
             >
               {isLogin === false ? "Login" : "Logout"}
